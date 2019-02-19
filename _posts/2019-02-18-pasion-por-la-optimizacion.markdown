@@ -25,3 +25,5 @@ De todo ésto supongo que iré escribiendo en éste blog. De cómo utilizo mi di
 Este es mi punto de partida.
 
 NOTA: A dia de hoy, 18 de Febrero de 2019, la carga de ésta entrada pesa 24,1 KB, de los cuales sólo 5,6 son de contenido. 10 KB se van en el css del tema con estilos que probablemente no se usen nunca. Los otros 5 restantes son de la imagen de arriba, que intentaré que desaparezca pues no aporta nada. Y del favicon que seguirá el mismo camino. Iré actualizando.
+
+UPDATE 1: 19-FEB: Tras una primera optimización en la primera versión del blog, he podido rebajar el peso de carga de éste post a . Un %. Casi nada. Y eso que he tenido que usar un jpg en el logo, ya que, maravillas de la estandarización, no puedo usar webp como formato si quiero que se vea en otro navegador que no sea Chrome para escritorio.

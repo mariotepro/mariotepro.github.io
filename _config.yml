@@ -17,7 +17,7 @@
 title:              "Mariotepro"
 description:        "Me responsabilizo de las opiniones aquí vomitadas"
 author_name:        "Mariotepro" # change this to your name
-logo_url:           /assets/logo.webp
+logo_url:           /assets/logo.jpg
 
 # Site Settings
 url:                https://mariotepro.github.io # main url
