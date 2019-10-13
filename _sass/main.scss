@@ -217,7 +217,7 @@ iframe {
   width: 100%;
 }
 article {
-  max-width: 500px;
+  max-width: 625px;
   margin: 0 auto;
   h1.title {
     line-height: 1.4em;
@@ -242,8 +242,8 @@ article {
     margin: 30px 0;
   }
   p {
-    font-size: 15px;
-    line-height: 1.9em;
+    font-size: 16px;
+    line-height: 1.45em;
     word-wrap: break-word;
   }
   .footnote {
@@ -363,37 +363,5 @@ section {
         }
       }
     }
-  }
-}
-@keyframes bounce {0% {
-    transform: translate3d( 0, -1000px, 0 );
-  }
-  60% {
-    transform: translate3d( 0, 25px, 0 );
-  }
-  75% {
-    transform: translate3d( 0, -10px, 0 );
-  }
-  90% {
-    transform: translate3d( 0, 5px, 0 );
-  }
-  100% {
-    transform: none;
-  }
-}
-@-webkit-keyframes bounce {0% {
-    -webkit-transform: translate3d( 0, -1000px, 0 );
-  }
-  60% {
-    -webkit-transform: translate3d( 0, 25px, 0 );
-  }
-  75% {
-    -webkit-transform: translate3d( 0, -10px, 0 );
-  }
-  90% {
-    -webkit-transform: translate3d( 0, 5px, 0 );
-  }
-  100% {
-    -webkit-transform: none;
   }
 }
