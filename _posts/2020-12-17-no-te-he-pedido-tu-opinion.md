@@ -32,7 +32,7 @@ Pues venga a darle Perico al puto torno con que si debo hacer esto y debo hacer 
 
 Cada vez que se insinúa algo de esto se está poniendo en duda la capacidad de razonar, meditar y elegir que tengo. Tener que justificarme ante esto es algo que me quema, porque no tengo por qué hacerlo.
 
-No tengo por qué defenderme. No tengo por qué dar razonamientos sobre mi vida a nadie. Nadie tiene por qué decirme lo que debo o no debo hacer. Si no le importa a la gente, que me deje de decir absolutamente nada si no se lo he solicitado.
+No tengo por qué defenderme. No tengo por qué dar razonamientos sobre mi vida a nadie. Nadie tiene por qué decirme lo que debo o no debo hacer. Si no le importa a la gente, que me deje de decir absolutamente nada si no se lo he pedido.
 
 Por mi parte, y lo digo muy en serio, a partir de ahora me voy a tomar TREMENDAMENTE mal las veces que alguien se meta en mi vida.
 
@@ -42,7 +42,7 @@ Realmente, me parece algo personal.
 
 En ocasiones, la recomendación es una impertinencia bastante dolorosa. Me explico. El interlocutor no sabe absolutamente nada acerca de la relacion de dos personas como para recomendarles casarse, irse a vivir juntos o no. No sabe si están bien; si están pasando una crisis; si tienen una relación abierta; si ellos quieren casarse, pero su entorno familiar no quiere que lo hagan.
 
-Esto puede llegar a ser incluso más doloroso cuando se trata de la «recomendación» de tener un hijo. He conocido casos de parejas que, intentando tener un hijo, han tenido graves problemas en la concepción. Dicha «recomendación» que parece bienintencionada, puede ser como poner un nuevo clavo en el ataud de un corazón de unas personas que están intentando ser padres con todo su alma y su biología no se lo permite. Algo bienintencionado puede ser tremendamente doloroso.
+Esto puede llegar a ser incluso más doloroso cuando se trata del consejo, normalmente jocoso («¿Para cuándo el churumbel?»), de tener un hijo. He conocido casos de parejas que, intentando procrear, han tenido graves problemas en la concepción. Dicha «recomendación» que parece bienintencionada, puede ser como poner un nuevo clavo en el ataud del corazón de unas personas que están intentando ser padres con todo su alma y su biología no se lo permite. Algo bienintencionado puede ser tremendamente doloroso.
 
 No quiero decir que deba recaer toda la responsabilidad sobre el que da el consejo, puesto que dicha persona no sabe de la situación. Pero ahí está donde, el sentido común, nos debería decir que si no sabemos dónde nos metemos...
 
