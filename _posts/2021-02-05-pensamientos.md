@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pensamientos"
-date:   2020-09-10
+date:   2021-02-05
 ---
 
 1. Sólo soy responsable de mi mismo. De mis pensamientos, de mis reacciones, de mis actos.
