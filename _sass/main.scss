@@ -13,7 +13,7 @@ body {
   line-height: 20px;
   font-weight: normal;
   font-style: normal;
-  font-family: Helvetica, Arial;
+  font-family: Garamond, Georgia;
   color: #333333;
   padding: 20px;
   margin: 0;
@@ -177,7 +177,7 @@ code,
 pre,
 .code,
 .footnotes {
-  font-family: monospace;
+  font-family: Helvetica;
 }
 code {
   color: #f14e32;
@@ -229,6 +229,7 @@ article {
     line-height: 1.4em;
     text-align: center;
     font-size: 1.6em;
+    font-family: Helvetica, Arial;
   }
   .divider {
     background: #ddd;
@@ -309,11 +310,12 @@ article {
 }
 .page-navigation,
 .footer {
-  font-family: monospace;
+  font-family: Helvetica;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
 .page-navigation {
   margin: 50px auto 0 auto;
@@ -361,7 +363,7 @@ section {
         display: inline-block;
         color: #757575;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        font-size: 12px;
       }
       @media (min-width: 992px) {a {
           border-bottom: 2px solid transparent;
