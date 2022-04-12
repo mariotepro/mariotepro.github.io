@@ -5,6 +5,7 @@ layout: default
 <section>
 
 	{% for post in site.posts %}
+	  {% if post.hide == null or post.hide == false %}
 		{% unless post.next %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 		{% else %}
@@ -14,6 +15,7 @@ layout: default
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 		{% endunless %}
+	  {% endif %}
 
 		<ul>
 			<li>
