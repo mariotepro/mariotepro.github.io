@@ -12,11 +12,11 @@ date:   2021-02-05
 6. Enfadarte cuando alguien se equivoca no le enseña a no equivocarse. Le enseña a esconder sus errores.
 7. O escoges el dolor de la disciplina o escoges el de los remordimientos.
 
-> Antes de decir nada, preguntate:
-> -- ¿Es bueno?
-> -- ¿Es verdad?
-> -- ¿Es necesario?
-> 
-> -- ¿Es necesario decirlo?
-> -- ¿Soy yo el que tiene que decirlo?
-> -- ¿Tiene que ser ahora cuando tengo que decirlo?
+> Antes de decir nada, preguntate:  
+> -- ¿Es bueno?  
+> -- ¿Es verdad?  
+> -- ¿Es necesario?  
+>   
+> -- ¿Es necesario decirlo?  
+> -- ¿Soy yo el que tiene que decirlo?  
+> -- ¿Tiene que ser ahora cuando tengo que decirlo?  
