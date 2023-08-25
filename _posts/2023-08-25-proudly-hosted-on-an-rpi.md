@@ -2,7 +2,6 @@
 layout: post
 title:  "Proudly hosted on a Raspberry Pi"
 date:   2023-08-25
-hide: true
 ---
 
 Bienvenidos a mi blog.
