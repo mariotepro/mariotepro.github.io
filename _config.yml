@@ -35,3 +35,4 @@ sass:
 remote_theme: heiswayi/the-plain
 plugins:
   - jekyll-remote-theme
+  - jekyll-admin
