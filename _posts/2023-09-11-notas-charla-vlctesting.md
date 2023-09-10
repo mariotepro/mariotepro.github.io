@@ -107,29 +107,29 @@ Pero vivimos en el mundo real. Y en este punto, suelen ocurrir dos cosas:
 
 Hay veces (las que más), que recibimos código de otros. Báses de código extensas que no sabemos de dónde vienen, no hay documentación, está fatal. El programador que lo hizo ya ni está en la empresa...
 
-    * Como ejemplo, mi confinamiento en 2020 consistió en mejorar la carga de un fichero que se hacía gracias a un programa alojado en Websphere 7. WebSphere 7 ejecuta JAVA 5.
-    * Las responsables del producto, cuando yo entré, no sabían nada del código que había. Decían que lo había estado llevando un chico que se fue. Investigando a través de commits, para mi sorpresa ví que no había estado llevando nada, había estado un par de meses en la empresa y se piró porque no conseguía arreglar aquel desastre.
+   * Como ejemplo, mi confinamiento en 2020 consistió en mejorar la carga de un fichero que se hacía gracias a un programa alojado en Websphere 7. WebSphere 7 ejecuta JAVA 5.
+   * Las responsables del producto, cuando yo entré, no sabían nada del código que había. Decían que lo había estado llevando un chico que se fue. Investigando a través de commits, para mi sorpresa ví que no había estado llevando nada, había estado un par de meses en la empresa y se piró porque no conseguía arreglar aquel desastre.
       
 Claro, aquí tenemos varias opciones:
 
-      * Método Villarriba: Paramos el desarrollo del producto. No se realiza ningúna funcionalidad ni se arregla nada hasta que no quede todo limpio y reluciente:
-        * Dedicamos todo el tiempo y recursos necesarios hasta dejarlo "como Dios manda"
+   * Método Villarriba: Paramos el desarrollo del producto. No se realiza ningúna funcionalidad ni se arregla nada hasta que no quede todo limpio y reluciente:
+     * Dedicamos todo el tiempo y recursos necesarios hasta dejarlo "como Dios manda"
 
-      * Método Oppenheimer u opción nucelar: Hacemos un cráter donde antes había un software y lo empezamos desde cero otra vez.
-        * Eliminar todo lo existente, rediseñarlo y construirlo desde cero
+   * Método Oppenheimer u opción nucelar: Hacemos un cráter donde antes había un software y lo empezamos desde cero otra vez.
+     * Eliminar todo lo existente, rediseñarlo y construirlo desde cero
 
-      * La Ronaldinha: Miramos a la grada y seguimos.
-        * Hacemos como que nada ha pasado. No tomamos ninguna acción. Seguimos a lo nuestro, desarrollando sin tener ningún tipo de cuidado tampoco
+   * La Ronaldinha: Miramos a la grada y seguimos.
+     * Hacemos como que nada ha pasado. No tomamos ninguna acción. Seguimos a lo nuestro, desarrollando sin tener ningún tipo de cuidado tampoco
 
-      * Tenemos otra opción:
-        * Embrace lo que tenemos. Lo que está está. Pero vamos a continuar desarrollando, esta vez no permitiendo introducir nada más. Todo lo que entre nuevo ha de estar bien. Sin defectos, correctamente testeado y sin duplicados.
-        * Y dejamos que poco a poco todo el código que ya teníamos, se vea beneficiado por el código que entra nuevo.
-        * ¿Por qué digo que "el código que entra nuevo"? Sencillo:
-          * Se calcula que el 20% del código de una empresa es renovado de forma anual. (DISCLAIMER: Ya sabéis que son estudios y medias, que la realidad de nuestra empresa puede ser perfectamente otra. Pero nos hacemos a la idea del point.)
-          * Entonces, será acumulativo.
-            * El primer año, será un 20%
-            * El segundo año, un 35% de todo el código estará "limpio"
-            * Al cabo de 5 años, un 50% del código estará limpio.
+   * Tenemos otra opción:
+     * Embrace lo que tenemos. Lo que está está. Pero vamos a continuar desarrollando, esta vez no permitiendo introducir nada más. Todo lo que entre nuevo ha de estar bien. Sin defectos, correctamente testeado y sin duplicados.
+     * Y dejamos que poco a poco todo el código que ya teníamos, se vea beneficiado por el código que entra nuevo.
+     * ¿Por qué digo que "el código que entra nuevo"? Sencillo:
+       * Se calcula que el 20% del código de una empresa es renovado de forma anual. (DISCLAIMER: Ya sabéis que son estudios y medias, que la realidad de nuestra empresa puede ser perfectamente otra. Pero nos hacemos a la idea del point.)
+       * Entonces, será acumulativo.
+         * El primer año, será un 20%
+         * El segundo año, un 35% de todo el código estará "limpio"
+         * Al cabo de 5 años, un 50% del código estará limpio.
 
 Conocemos los principios del Clean Code, pero y si Clean as you Code?
 
@@ -137,24 +137,24 @@ Presentamos la estrategia Clean as you Code, de SonarSource. Por comentarlo, est
 
 ¿En qué se basa? 
 
-    * Dejar el pasado atrás. Vamos a olvidarnos por un momento del código antiguo que tenemos. Vamos a centrarnos en que el código nuevo que introduzcamos sea bueno.
-      * El concepto de código nuevo es tanto nuevas funcionalidades que metamos
-      * Como código que estamos retocando antiguo.
-      * Básicamente es, todo lo que estamos haciendo lo hacemos bien.
-    * Para ello, el programador es y ha de ser responsable de lo que hace. Si yo estoy programando algo, soy responsable de aquello que hago hacerlo chachi. Y para ello tengo herramientas para saber si lo estoy haciendo bien.
-      * Si hago algo nuevo, lo hago chachi
-      * Si toco algo viejo, lo dejo chachi
-      * El código que estoy haciendo hoy tiene que ser bueno.
-    * Estandaricemos.
-      * Como empresa, como organización o equipo, vamos a sentarnos y vamos a decidir las herramientas que usamos. Las métricas y la forma de trabajar que usamos
-      * De esa forma sea quien sea, esté en el proyecto que esté, con la tecnología que sea, y trabaje sobre algo nuevo o algo viejo, trabajaremos todos sobre el mismo lienzo y con las mismas pinturas.
-    * Remediar la deuda técnica:
-      * ¿Oye, qué pasa con el código viejo? ¿Que si tiene una vulnerabilidad no la arreglo?
-      * Nope.
-        * Como hemos dicho antes, los desarrolladores son responsables de su código y de la calidad del mismo.
-        * Pero, ¿quién es el responsable del tiempo y recursos que hay en el proyecto?. Efectivamente los managers. Los managers son los que van a tener esa visión global, para decidir si algo se ha de abordar o no o si se ha de priorizar una tarea sobre otra. Será entonces cuando le asignen a un programador la tarea de limpiar o arreglar X incidencia, error o característica.
-        * Pero es que incluso, aunqeu no decidamos ir proactivamente a arreglar, el código antiguo se irá beneficiando de los cambios en el nuevo de forma gradual.
-      * Esto tiene una ventaja principal. El código que está limpio es más fácil, barato y mucho menos doloroso de mantener o mejorar en caso de que lo tengamos o lo queramos hacer.
+   * Dejar el pasado atrás. Vamos a olvidarnos por un momento del código antiguo que tenemos. Vamos a centrarnos en que el código nuevo que introduzcamos sea bueno.
+     * El concepto de código nuevo es tanto nuevas funcionalidades que metamos
+     * Como código que estamos retocando antiguo.
+     * Básicamente es, todo lo que estamos haciendo lo hacemos bien.
+   * Para ello, el programador es y ha de ser responsable de lo que hace. Si yo estoy programando algo, soy responsable de aquello que hago hacerlo chachi. Y para ello tengo herramientas para saber si lo estoy haciendo bien.
+     * Si hago algo nuevo, lo hago chachi
+     * Si toco algo viejo, lo dejo chachi
+     * El código que estoy haciendo hoy tiene que ser bueno.
+   * Estandaricemos.
+     * Como empresa, como organización o equipo, vamos a sentarnos y vamos a decidir las herramientas que usamos. Las métricas y la forma de trabajar que usamos
+     * De esa forma sea quien sea, esté en el proyecto que esté, con la tecnología que sea, y trabaje sobre algo nuevo o algo viejo, trabajaremos todos sobre el mismo lienzo y con las mismas pinturas.
+   * Remediar la deuda técnica:
+     * ¿Oye, qué pasa con el código viejo? ¿Que si tiene una vulnerabilidad no la arreglo?
+     * Nope.
+       * Como hemos dicho antes, los desarrolladores son responsables de su código y de la calidad del mismo.
+       * Pero, ¿quién es el responsable del tiempo y recursos que hay en el proyecto?. Efectivamente los managers. Los managers son los que van a tener esa visión global, para decidir si algo se ha de abordar o no o si se ha de priorizar una tarea sobre otra. Será entonces cuando le asignen a un programador la tarea de limpiar o arreglar X incidencia, error o característica.
+       * Pero es que incluso, aunqeu no decidamos ir proactivamente a arreglar, el código antiguo se irá beneficiando de los cambios en el nuevo de forma gradual.
+     * Esto tiene una ventaja principal. El código que está limpio es más fácil, barato y mucho menos doloroso de mantener o mejorar en caso de que lo tengamos o lo queramos hacer.
 
 Antes hemos comentado que hay una serie de herramientas para ayudarnos a cumplir esa estandarización. La herramienta principal para ello es lo que llamamos Quality Gate o en la lengua de Cervantes, Umbral de Calidad.
 
