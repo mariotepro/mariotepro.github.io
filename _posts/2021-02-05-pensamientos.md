@@ -11,6 +11,7 @@ date:   2021-02-05
 5. No voy a ir detrás de nadie, si alguien tiene algo que decirme, que sea él/ella quién me lo diga. No soy responsable de su enfado.
 6. Enfadarte cuando alguien se equivoca no le enseña a no equivocarse. Le enseña a esconder sus errores.
 7. O escoges el dolor de la disciplina o escoges el de los remordimientos.
+8. Muchas veces, las emociones negativas que sentimos vienen por un estado físico que no está bien. Descansa, duerme, come bien, ve al baño, bebe agua. El 90% de las veces esas emociones mejorarán.
 
 > Antes de decir nada, preguntate:  
 > -- ¿Es bueno?  
@@ -19,4 +20,4 @@ date:   2021-02-05
 >   
 > -- ¿Es necesario decirlo?  
 > -- ¿Soy yo el que tiene que decirlo?  
-> -- ¿Tiene que ser ahora cuando tengo que decirlo?  
+> -- ¿Tiene que ser ahora cuando tengo que decirlo?
