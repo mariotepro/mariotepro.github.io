@@ -36,3 +36,12 @@ jobs:
           source: "_site/*"
           strip_components: 1
           rm: true
+
+      - name: Restart Container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD}}
+          port: ${{ secrets.PORT }}
+          script: sudo docker restart nginx
