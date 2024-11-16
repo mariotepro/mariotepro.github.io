@@ -36,7 +36,7 @@ jobs:
     needs: build
     steps:
       - name: Download site files
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: site-files
 
