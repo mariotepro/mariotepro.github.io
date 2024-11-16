@@ -35,3 +35,4 @@ jobs:
           target: /opt/websites/mariotepro
           source: "_site/*"
           strip_components: 1
+          rm: true
