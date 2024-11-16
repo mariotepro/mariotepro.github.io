@@ -23,7 +23,9 @@ jobs:
           bundle install
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: |
+          bundle exec jekyll build
+          ls -alh _site 
 
       - name: Upload site files
         uses: actions/upload-artifact@v4
@@ -49,5 +51,4 @@ jobs:
           port: 22
           script: |
             cd /opt/websites/***pro
-            rm -rf *
-            cp -r '_site/*' .
+            bash -c "rm -rf * && cp -r _site/* ."
