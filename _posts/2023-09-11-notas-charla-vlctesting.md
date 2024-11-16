@@ -2,7 +2,7 @@
 layout: post
 title:  "Notas Charla VLC testing"
 date:   2023-09-11
-hide: true
+hide: false
 ---
 
 # Charla VLC testing
