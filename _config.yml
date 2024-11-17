@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 # Site Info
 title:              "Mariotepro"
-description:        "Me responsabilizo de las opiniones aquí vomitadas"
+description:        "Me responsabilizo de las opiniones aquí vertidas"
 author_name:        "Mariotepro" # change this to your name
 logo_url:           /assets/logo.jpg
 
