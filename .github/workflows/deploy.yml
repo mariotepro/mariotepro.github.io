@@ -28,17 +28,10 @@ jobs:
         run: |
           bundle exec jekyll build
       
-      - name: Copy to VPS via SCP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          port: ${{ secrets.VPS_PORT }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          target: ${{ secrets.VPS_DEPLOY_PATH }}
-          source: "_site/*"
-          strip_components: 1
-          rm: true
+      - name: Copy to VPS via Rsync
+        run: |
+          rsync -avz --delete --exclude='.git' _site/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_DEPLOY_PATH }}
+        
 
       - name: Restart Container
         uses: appleboy/ssh-action@master
