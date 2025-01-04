@@ -21,6 +21,7 @@ gem "jekyll", "~> 3.10.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17.0"
   gem "jekyll-admin", "~> 0.11.1"
+  gem "jekyll-minifier", "~>  0.1.10"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
