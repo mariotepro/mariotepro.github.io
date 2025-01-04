@@ -19,7 +19,7 @@ gem "jekyll", "~> 3.10.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.17.0"
   gem "jekyll-admin", "~> 0.11.1"
 end
 
@@ -31,6 +31,6 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 gem 'jekyll-remote-theme'
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9.1"
 
 gem 'kramdown-parser-gfm'

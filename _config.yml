@@ -12,7 +12,7 @@
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# in the templates via {{ site.myvariable` }}.
 # Site Info
 title:              "Mariotepro"
 description:        "Me responsabilizo de las opiniones aquí vertidas"
@@ -36,3 +36,13 @@ remote_theme: heiswayi/the-plain
 plugins:
   - jekyll-remote-theme
   - jekyll-admin
+
+# Jekyll admin prueba
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
+  homepage: "pages"
