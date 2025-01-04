@@ -32,7 +32,8 @@ jobs:
         run: |
           whoami
           pwd
-          rsync -avz --delete --exclude='.git' --no-group --no-times --inplace -e "ssh -p ${{ secrets.VPS_PORT }}" _site/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_DEPLOY_PATH }}          
+          rm -rf /opt/websites/mariotepro/*
+          cp _site/* /opt/websites/mariotepro
           
       - name: Restart Container
         uses: appleboy/ssh-action@master
