@@ -27,19 +27,15 @@ jobs:
       - name: Build site
         run: |
           bundle exec jekyll build
+
+      - name: Delete previous contents
+        run: |          
+          rm -rf ${{ secrets.VPS_DEPLOY_PATH }}/*
       
-      - name: Copy to VPS via Rsync
+      - name: Copy contents folder
         run: |
-          whoami
-          pwd
-          rm -rf /opt/websites/mariotepro/*
-          cp _site/* /opt/websites/mariotepro
+          cp -r _site/* ${{ secrets.VPS_DEPLOY_PATH }}
           
       - name: Restart Container
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          port: ${{ secrets.VPS_PORT }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          script: sudo docker restart nginx
+        run: |
+          sudo docker restart nginx
