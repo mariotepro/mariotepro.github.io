@@ -21,68 +21,64 @@
   font-style: italic;
   font-display: swap;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html {
   margin: 0;
   padding: 0;
   height: 100%;
 }
+
 body {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 19px;              /* libro */
+  line-height: 1.75;            /* libro */
   font-weight: normal;
   font-style: normal;
   font-family: "EB Garamond Local", Georgia, serif;
   color: #2b2b2b;
-  padding: 20px;
+  padding: 22px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  overflow: scroll;
+  overflow-y: scroll;           /* evita “scroll” horizontal raro */
+  overflow-x: hidden;
+
   @media (min-width: 992px) {
-    padding: 35px 50px;
+    padding: 48px 60px;         /* más aire en desktop */
   }
 }
-h1, h2, h3 {
-  margin-top: 2.2em;
-  margin-bottom: 0.8em;
-}
-h4,h5,h6 {
-    margin-bottom: 1rem;
-    line-height: 1.25;
-    color: #313131;
-}
-h1 {
-  font-size: 2rem;
+
+/* Títulos con ritmo editorial */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  color: #313131;
+  margin: 2.2em 0 0.7em 0;      /* aire arriba, menos abajo */
 }
 
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.35rem; }
 
 h4,
 h5,
 h6 {
-  margin-top: 1.1rem;
   font-size: 1.1rem;
 }
+
 img {
   max-width: 100%;
 }
+
 a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid #555;
+
   &.image {
     display: block;
     text-align: center;
@@ -91,20 +87,25 @@ a {
     margin: 30px 0;
   }
 }
+
 mark {
   background: #fffc76;
   padding: 0 5px;
 }
+
 blockquote {
-  border-left: 5px solid #ccc;
-  margin: 40px 0;
-  padding: 5px 30px;
+  border-left: 4px solid #ccc;
+  margin: 2.2em 0;
+  padding: 0.6em 1.4em;
   background: #eee;
+  line-height: 1.75;
 }
+
 .logo {
   position: relative;
   margin: 0 auto 35px;
   text-align: center;
+
   a {
     color: #000;
     text-decoration: none;
@@ -118,26 +119,32 @@ blockquote {
     line-height: 100px;
     border: 5px solid #fff;
     box-sizing: border-box;
+
     &:hover,
     &:focus {
       background: #f14e32;
     }
+
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
       display: inline-block !important;
     }
+
     .logo-avatar {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
     }
-    @media (max-width : 480px) {&:hover + .logo-prompt,
+
+    @media (max-width : 480px) {
+      &:hover + .logo-prompt,
       &:focus + .logo-prompt {
         display: none !important;
       }
     }
   }
+
   .logo-prompt {
     position: absolute;
     display: none;
@@ -153,6 +160,7 @@ blockquote {
     line-height: 1.2;
     top: 50%;
     margin-top: -10px;
+
     &:before {
       content: "";
       border-width: 5px 5px 5px 0;
@@ -166,58 +174,72 @@ blockquote {
     }
   }
 }
+
 iframe {
   margin: 45px 0 !important;
+  width: 100%;
 }
+
 ul,
 ol {
-  margin: 40px 0;
-  padding-left: 50px;
+  margin: 1.6em 0;
+  padding-left: 1.4em;
+
   li {
     word-wrap: break-word;
+    margin: 0.4em 0;
   }
+
   img {
     margin: 40px 0;
     border-radius: 5px;
   }
 }
+
 sup {
   vertical-align: top;
   position: relative;
   top: -0.5em;
   margin-left: 1px;
 }
+
 time {
   color: #777;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+
   a {
     text-decoration: none;
     border-bottom: none;
   }
 }
+
+/* Código: mantenlo separado tipográficamente */
 code,
 pre,
 .code,
 .footnotes {
-  font-family: Helvetica;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
 code {
   color: #f14e32;
   background: #eee;
   padding: 2px 6px;
-  font-size: 12px;
+  font-size: 0.9em;
 }
+
 pre {
   display: block;
   margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
   white-space: pre;
   overflow-x: auto;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 1rem;
+  padding: 1.1rem;
+
   code {
     font-size: 100%;
     color: inherit;
@@ -225,61 +247,77 @@ pre {
     padding: 0;
   }
 }
+
 table {
   width: 100%;
   table-layout: fixed;
-  margin: 45px 0;
+  margin: 2.2em 0;
+
   thead {
     background: #f2f2f2;
   }
+
   th {
     text-align: left;
     padding: 8px 10px;
     border-bottom: 15px solid #fff;
   }
+
   td {
-    padding: 4px 0;
+    padding: 6px 0;
   }
 }
-iframe {
-  width: 100%;
-}
-article p + p {
-  margin-top: 1.4em;
-}
+
+/* ===== Libro: columna, ritmo y microtipografía ===== */
+
 article {
-  letter-spacing: 0.01em;
-  max-width: 800px;
+  max-width: 720px;            /* medida “libro” */
   margin: 0 auto;
+  letter-spacing: 0.005em;     /* más sutil que 0.01 */
+  text-rendering: optimizeLegibility;
+
   h1.title {
-    line-height: 1.4em;
+    line-height: 1.2;
     text-align: center;
-    font-size: 1.6em;
-    font-family: Helvetica, Arial;
+    font-size: 2.2rem;
+    margin: 0.9em 0 1.2em 0;
+    font-family: inherit;      /* fuera Helvetica */
+    font-weight: 600;          /* usa tu semibold */
   }
+
   .divider {
     background: #ddd;
     background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
     background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
     background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
     height: 1px;
-    margin: 2em 0;
+    margin: 2.2em 0;
   }
+
   .center {
     text-align: center;
     margin: 0 auto;
   }
+
   hr {
     border: 0;
     border-bottom: 1px solid #000;
-    margin: 30px 0;
+    margin: 2.2em 0;
   }
+
   p {
-    font-size: 18px;
-    line-height: 1.7;
-    margin: 0 0 1.2em 0;
+    font-size: 19px;
+    line-height: 1.75;
+    margin: 0 0 1.35em 0;       /* más aire */
     word-wrap: break-word;
+    hyphens: auto;             /* rompe mejor en español */
   }
+
+  /* Párrafo seguido: un poquito más de pausa */
+  p + p {
+    margin-top: 1.15em;
+  }
+
   .footnote {
     border: 0;
     background-color: #0087BE;
@@ -287,44 +325,54 @@ article {
     padding-left: 2px;
     padding-right: 2px;
   }
+
   .footnotes {
-    margin: 50px auto;
+    margin: 3em auto 0 auto;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9rem;
     color: #666;
+
     p {
-      line-height: 1rem;
+      line-height: 1.5;
       font-weight: normal;
     }
+
     ol {
       margin: 0;
-      padding-left: 15px;
+      padding-left: 1.2em;
+
       li {
         font-weight: bold;
       }
     }
+
     .reversefootnote {
       border: 0;
       color: #0087BE;
     }
   }
+
   a:hover {
     color: #369;
     border-color: #369;
   }
-    li {
-      margin: 10px 0;
-      padding-left: 10px;
-    }
+
+  li {
+    margin: 10px 0;
+    padding-left: 10px;
+  }
 }
+
 .back {
   text-align: center;
+
   a {
     text-decoration: none;
     margin: 40px auto 0;
     display: inline-block;
     padding: 10px;
     border: 0;
+
     &:before {
       content: "<<";
       margin-right: 5px;
@@ -332,68 +380,86 @@ article {
     }
   }
 }
+
 .block {
   display: block;
 }
+
 .page-navigation,
 .footer {
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
-  max-width: 800px;
+  max-width: 720px;            /* acompaña al artículo */
   margin: 0 auto;
   font-size: 0.7rem;
   text-transform: uppercase;
 }
+
 .page-navigation {
   margin: 50px auto 0 auto;
+
   a {
     display: inline-block;
     text-decoration: none;
     border-bottom: none;
   }
+
   span {
     display: inline-block;
   }
 }
+
 .footer {
   margin-top: 50px;
   color: #777;
+
   a {
     border: none;
     font-weight: bold;
   }
 }
+
+/* Listado de posts */
 section {
-  max-width: 800px;
+  max-width: 720px;            /* acompaña a “libro” */
   margin: 0 auto 50px auto;
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
     li {
       margin: 25px 0;
+
       .title {
         max-width: 100%;
         word-wrap: normal !important;
       }
+
       a {
         text-decoration: none;
         border: 0;
         color: #000;
         box-sizing: border-box;
       }
+
       .post-date {
         float: right;
         margin: 0 0 0 20px;
       }
+
       span {
         display: inline-block;
         color: #757575;
         letter-spacing: 1px;
         font-size: 12px;
       }
-      @media (min-width: 992px) {a {
+
+      @media (min-width: 992px) {
+        a {
           border-bottom: 2px solid transparent;
+
           &:hover {
             border-color: #000;
           }

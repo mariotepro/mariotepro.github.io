@@ -4,7 +4,7 @@ title:  "Pensamientos"
 date:   2021-02-05
 ---
 
-1. Sólo soy responsable de mi mismo. De mis pensamientos, de mis reacciones, de mis actos.
+1. Sólo soy responsable de mi mismo y de mis acciones.
 2. Lo único que de verdad permanece es el cambio. Todo cambia, es lo natural. Enfrentarte a ello no sirve de nada.
 3. El pasado nunca volverá y el futuro no sabemos si vendrá. Lo único que existe es el aquí y el ahora.
 4. Creo que dejar de hablar con una persona que ha demostrado que no quiere hablar contigo es un síntoma de madurez. Pienso que si estás mal con un amigo, sacas un minuto de debajo de las piedras e intentas hablar con él. Aunque sea "a ver, qué pasa, cuéntame todo con pelos y señales"
