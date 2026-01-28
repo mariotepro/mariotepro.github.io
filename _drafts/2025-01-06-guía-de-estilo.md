@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Guía de estilo
-date: 2025-01-06
 ---
 
 Guía de estilo para este blog:

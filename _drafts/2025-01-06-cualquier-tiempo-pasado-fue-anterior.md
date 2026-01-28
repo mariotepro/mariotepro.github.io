@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Cualquier tiempo pasado fue anterior
-date: 2025-01-06
 ---
 
 <!--
