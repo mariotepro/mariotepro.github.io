@@ -1,3 +1,26 @@
+@font-face {
+  font-family: "EB Garamond Local";
+  src: url("/assets/fonts/EBGaramond-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond Local";
+  src: url("/assets/fonts/EBGaramond-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond Local";
+  src: url("/assets/fonts/EBGaramond-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,7 +36,7 @@ body {
   line-height: 20px;
   font-weight: normal;
   font-style: normal;
-  font-family: Garamond, Georgia;
+  font-family: "EB Garamond Local", Georgia, serif;
   color: #333333;
   padding: 20px;
   margin: 0;
