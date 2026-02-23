@@ -8,7 +8,7 @@ A raíz de lo ocurrido estos días atrás en mi ciudad, en mi barrio concretamen
 
 Siempre que ocurren desgracias humanas como estas, hay quienes sostienen que a los agresores (o asesinos, como en este caso; no quiero quitarles mérito) se les deberían aplicar soluciones iguales o peores. Encarcelamiento inmediato y olvido para la posteridad.
 
-En el asesinato, de una u otra manera se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
+En el asesinato del viernes, se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
 
 Desde mi visceralidad, la misma que la de quien insinúa tales albardadas, me sale decir que, si consideran la cárcel como un resort de lujo, deberían probar a ingresar. Al parecer estás mejor allí que en tu casa. Prueba, valiente.
 
@@ -40,7 +40,7 @@ También es verdad que analizar y atacar esto requiere mucho esfuerzo, especialm
 
 Pero supongo que moler a palos, aislar y dejar que se pudran fuera de la sociedad a muchos les parece mejor opción. Si no fuera porque el mismo problema que entró saldrá. Y puede que mucho peor. Porque no sé, ¿qué puede salir mal de reunir a lo peor de cada casa en el mismo punto durante años, guardándole rencor a la sociedad que un día les apartó? Supongo que sus familias y amigos, durante ese tiempo, también estarán bastante contentos.
 
-No sé. A mí me parece sentido común. Prefiero que no se mate a nadie a responder cuando alguien lo hace.
+No sé, llámame loco, pero prefiero que no se mate a nadie a responder cuando alguien lo hace.
 
 Me enfada muchísimo que ahora nos planteemos qué hacer y no por qué ha ocurrido.
 
