@@ -8,11 +8,10 @@ A raíz de lo ocurrido estos días atrás en mi ciudad, en mi barrio concretamen
 
 Siempre que ocurren desgracias humanas como estas, hay quienes sostienen que a los agresores (o asesinos, como en este caso; no quiero quitarles mérito) se les deberían aplicar soluciones iguales o peores. Encarcelamiento inmediato y olvido para la posteridad.
 
-En el asesinato del viernes se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
+En el asesinato del viernes 
+se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
 
-Desde mi visceralidad, la misma que la de quien insinúa tales albardadas, me sale decir que, si consideran la cárcel como un resort de lujo, deberían probar a ingresar. Al parecer estás mejor allí que en tu casa. Prueba, valiente.
-
-Pero, siendo un poco más racional, piensas sobre el sistema.
+Te hace reflexionar sobre el sistema.
 
 El punitivismo no es más que una reacción a un suceso. No evita el problema. De igual manera que la policía no evita los delitos, solo reacciona ante ellos. Es el Estado dejando claro que son ellos, y nadie más, quienes tienen el monopolio de la violencia.
 
