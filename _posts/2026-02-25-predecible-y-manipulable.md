@@ -2,6 +2,7 @@
 layout: post
 title: Lo predecible es manipulable
 date: 2026-02-25
+tags: [pensamiento]
 ---
 
 Lo que se puede predecir se puede controlar. Puedes controlar las entradas para producir una respuesta que sabes que va a ocurrir.

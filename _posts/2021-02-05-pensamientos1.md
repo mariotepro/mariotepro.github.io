@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pensamientos"
+title:  "Pensamientos 1"
 date:   2021-02-05
 ---
 

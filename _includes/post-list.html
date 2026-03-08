@@ -1,0 +1,90 @@
+<section>
+  {% assign current_year = '' %}
+
+  {% for post in site.posts %}
+    {% if post.hide == nil or post.hide == false %}
+      {% if include.tag == 'entrada' %}
+        {% if post.tags == empty or post.tags contains 'entrada' %}
+          {% capture this_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+          {% if this_year != current_year %}
+            <h3 class="code">{{ post.date | date: '%Y' }}</h3>
+            {% assign current_year = this_year %}
+          {% endif %}
+
+          {% capture post_tags %}{{ post.tags | join: ', ' }}{% endcapture %}
+          {% if post_tags == '' %}
+            {% assign post_tags = 'entrada' %}
+          {% endif %}
+
+          <ul>
+            <li>
+              <div class="post-date code">
+                {% if include.show_tags %}
+                  <span class="post-tag">{{ post_tags }}</span>
+                {% endif %}
+                <span>{{ post.date | date: "%b %d" }}</span>
+              </div>
+              <div class="title">
+                <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+
+      {% elsif include.tag %}
+        {% if post.tags contains include.tag %}
+          {% capture this_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+          {% if this_year != current_year %}
+            <h3 class="code">{{ post.date | date: '%Y' }}</h3>
+            {% assign current_year = this_year %}
+          {% endif %}
+
+          {% capture post_tags %}{{ post.tags | join: ', ' }}{% endcapture %}
+          {% if post_tags == '' %}
+            {% assign post_tags = 'entrada' %}
+          {% endif %}
+
+          <ul>
+            <li>
+              <div class="post-date code">
+                {% if include.show_tags %}
+                  <span class="post-tag">{{ post_tags }}</span>
+                {% endif %}
+                <span>{{ post.date | date: "%b %d" }}</span>
+              </div>
+              <div class="title">
+                <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+
+      {% else %}
+      {% capture this_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% if this_year != current_year %}
+        <h3 class="code">{{ post.date | date: '%Y' }}</h3>
+        {% assign current_year = this_year %}
+      {% endif %}
+
+      {% capture post_tags %}{{ post.tags | join: ', ' }}{% endcapture %}
+      {% if post_tags == '' %}
+        {% assign post_tags = 'entrada' %}
+      {% endif %}
+
+      <ul>
+        <li>
+          <div class="post-date code">
+            {% if include.show_tags %}
+              <span class="post-tag">{{ post_tags }}</span>
+            {% endif %}
+            <span>{{ post.date | date: "%b %d" }}</span>
+          </div>
+          <div class="title">
+            <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+          </div>
+        </li>
+      </ul>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</section>

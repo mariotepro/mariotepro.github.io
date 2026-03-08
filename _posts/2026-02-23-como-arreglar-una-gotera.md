@@ -2,14 +2,14 @@
 layout: post
 title: ¿Cómo arreglar una gotera?
 date: 2026-02-23
+tags: [entrada]
 ---
 
 A raíz de lo ocurrido estos días atrás en mi ciudad, en mi barrio concretamente, hablábamos mis amigos y yo.
 
 Siempre que ocurren desgracias humanas como estas, hay quienes sostienen que a los agresores (o asesinos, como en este caso; no quiero quitarles mérito) se les deberían aplicar soluciones iguales o peores. Encarcelamiento inmediato y olvido para la posteridad.
 
-En el asesinato del viernes 
-se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
+Se habla de la posible implicación de bandas latinas. Algunos sugieren la creación de algo parecido al CECOT. Incluso hay quien alaba la labor en dicho centro, comparando la cárcel española con un hotel de cinco estrellas.
 
 Te hace reflexionar sobre el sistema.
 
@@ -17,11 +17,11 @@ El punitivismo no es más que una reacción a un suceso. No evita el problema. D
 
 La cárcel no es una solución, ni a corto ni a largo plazo. Privando de libertad se evita la comisión de otro delito durante el tiempo que se está allí, pero a costa de un gasto para el Estado. Un gran gasto, por cierto.
 
-Y digo gasto, no inversión. Porque el objetivo que allí se busca es, supuestamente, que el individuo regrese a la sociedad, sociedad de la que se le aparta. ¿Cómo se pretende hacer regresar a un individuo a una sociedad desde fuera de ella? Si fuera una inversión de verdad, se esperaría un retorno del gasto. Se esperaría que, mediante el dinero que se invierte, se consiguiera un beneficio.
+Y digo gasto, no inversión. Porque el objetivo que allí se busca es, supuestamente, que el individuo regrese a la sociedad. Una sociedad de la que se le aparta. ¿Cómo se pretende hacer regresar a un individuo a una sociedad desde fuera de ella? Si fuera una inversión de verdad, se esperaría un retorno del gasto. Se esperaría que, mediante el dinero que se invierte, se consiguiera un beneficio.
 
-Coincido con ellos en que creo que, en el tema de las bandas latinas, se están poniendo pocos medios.
+Coincido con ellos en que creo que en el tema de las bandas latinas, se están poniendo pocos medios.
 
-En lo que no coincido es en dónde: para que no se cometan los delitos hay que entender por qué. Y, una vez que entendamos por qué, podremos prevenirlo. Creo que, en el fondo, podemos resumirlo todo en asegurar el bienestar del ciudadano.
+En lo que no coincido es en dónde: para que no se cometan los delitos hay que entender por qué. Y una vez que entendamos por qué, podremos prevenirlo. Creo que, en el fondo, podemos resumirlo todo en asegurar el bienestar del ciudadano.
 
 Un ciudadano extranjero que siente que la sociedad lo apoya, con una buena educación, con un futuro y con unos servicios sociales fuertes, no tiene necesidad de verse arropado por una banda.
 
