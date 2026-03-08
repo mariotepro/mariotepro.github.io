@@ -2,6 +2,7 @@
 layout: post
 title:  "Pensamientos 1"
 date:   2021-02-05
+tags: [pensamiento]
 ---
 
 1. Sólo soy responsable de mi mismo y de mis acciones.

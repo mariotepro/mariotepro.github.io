@@ -2,6 +2,7 @@
 layout: post
 title: One thing at a time
 date: 2025-01-04
+tags: [entrada]
 ---
 
 A lo largo de los años he aprendido el valor de realizar una sola cosa de cada vez. Aún me cuesta aplicarlo en el día a día. Tener toda tu atención en una sola cosa. En lo que estés haciendo ahora mismo.

@@ -2,6 +2,7 @@
 layout: post
 title:  "¿Quién te crees?"
 date:   2020-08-20
+tags: [entrada]
 ---
 
 > Las cosas en el mundo no pueden cambiarse con un libro. No pueden cambiarse con nada. Creer que la realidad necesita de nosotros es no entenderla en absoluto. Por algún motivo, nos preocupa más cambiar el mundo que cambiar nosotros.

@@ -2,6 +2,7 @@
 layout: post
 title:  "Pasión por la optimización"
 date:   2019-02-18
+tags: [entrada]
 ---
 
 Más procesador. Más rápido. Más RAM. Más disco. Más batería. Más. Más. Más y más. Vivimos en un mundo sediento de algo más rápido que lo anterior, con más capacidad, mejor. Somos esclavos de lo nuevo. Somos esclavos de los números. Y se nos olvida algo muy importante. Quizá demasiado.

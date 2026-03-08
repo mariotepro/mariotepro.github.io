@@ -2,6 +2,7 @@
 layout: post
 title: Equilibrio
 date: 2026-01-28
+tags: [entrada]
 ---
 
 Cómo son las cosas de la edad.
