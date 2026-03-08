@@ -20,29 +20,27 @@ sections:
       - title: Periféricos
         links: 
           - title: Dell S2722DC
-            description: 
           - title: Keychron K8
             description: Blue switches
           - title: Logitech MX Master 3
-            description: 
+      - title: Cosas de divertirme
+        links: 
+          - title: Volkswagen Passat B8
+            description: Azul Noche, TDI 150 DSG 6. Rápido como un misil. Cómodo como una alfombra mágica. Mismo maletero que un autobús
+          - title: Triumph Street Triple 2008
+            description: Negra, suspensiones y frenos de Triumph Street Triple R, escapes Ixil.
   - title: Software
     links:
-      - title: Jekyll
-        url: https://jekyllrb.com
-        description: Generador del sitio estático y base de la actual configuración del blog.
-      - title: Docker
-        url: https://www.docker.com
-        description: Contenedores para servir el sitio detrás de Nginx Proxy Manager.
-      - title: Nginx Proxy Manager
-        url: https://nginxproxymanager.com
-        description: Gestión del acceso web y encaminamiento para los servicios que expones.
-      - title: Git
-        url: https://git-scm.com
-        description: Control de versiones del sitio con flujo de edición local + deploy.
-      - title: VS Code
-        url: https://code.visualstudio.com
-        description: Editor principal de edición local para mantener el contenido.
-      - title: GitHub
-        url: https://github.com
-        description: Alojamiento del repositorio y respaldo colaborativo del proyecto.
+    subsections:
+      - title: This Web
+        links:
+          - title: Jekyll
+            url: https://jekyllrb.com
+          - title: GitHub Actions
+          - title: The Plain Theme
+            url: https://nrird.com/
+            description: Desarrollada por Heiswayi Nrird. Altamente modificada por mi ;)
+          - title: Servidor propio en OVH
+            description: Lo tengo para otras cosas y así aprovecho la RPi para jugar
+
 ---

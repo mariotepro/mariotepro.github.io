@@ -8,5 +8,4 @@ sections:
     links:
       - title: Manu Mateos
         url: https://www.macram.es/
-        description: Blog con enfoques y recursos interesantes para escribir y pensar en digital.
 ---
