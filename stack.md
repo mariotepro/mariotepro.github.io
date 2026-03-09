@@ -29,6 +29,10 @@ sections:
             description: Azul Noche, TDI 150 DSG 6. Rápido como un misil. Cómodo como una alfombra mágica. Mismo maletero que un autobús
           - title: Triumph Street Triple 2008
             description: Negra, suspensiones y frenos de Triumph Street Triple R, escapes Ixil.
+          - title: Orbea Orca 2023 M30 Team LTD
+            description: 105 Di2 FTW
+          - title: Canyon Grand Canyon 2016
+            description: Construida a capricho. Grupo a medida, frenos XT, tija telescópica...            
   - title: Software
     links:
     subsections:
