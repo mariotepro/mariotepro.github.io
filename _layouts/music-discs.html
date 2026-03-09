@@ -1,0 +1,43 @@
+---
+layout: page
+---
+
+{% if page.discs %}
+  <section class="music-discs">
+    {% for disc in page.discs %}
+      <article class="music-disc" aria-label="{{ disc.title }}">
+        {% if disc.cover %}
+          {% if disc.url %}
+            <a
+              class="music-disc-cover-link"
+              href="{{ disc.url }}"
+              {% if disc.url contains "://" %}
+                target="_blank"
+                rel="noopener noreferrer"
+              {% endif %}
+            >
+              <img
+                class="music-disc-cover"
+                src="{{ disc.cover | relative_url }}"
+                alt="Portada de {{ disc.album | default: disc.title }}"
+              />
+            </a>
+          {% else %}
+            <img
+              class="music-disc-cover"
+              src="{{ disc.cover | relative_url }}"
+              alt="Portada de {{ disc.album | default: disc.title }}"
+            />
+          {% endif %}
+        {% endif %}
+        <div class="music-disc-info">
+          <p class="music-disc-title">{{ disc.title }}</p>
+          <p class="music-disc-artist">{{ disc.artist }}</p>
+          <p class="music-disc-year">{{ disc.year }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+{% else %}
+  <p>No hay discos añadidos todavía.</p>
+{% endif %}

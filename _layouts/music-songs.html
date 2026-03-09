@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+{% if page.songs %}
+  <section class="music-songs">
+    <ul class="music-song-list">
+      {% for song in page.songs %}
+        {% assign song_url = song.url | default: song.link | default: song.embed_url | default: song.player_url %}
+        <li class="music-song-item">
+          {% if song_url != blank %}
+            <a
+              class="music-song-link"
+              href="{{ song_url }}"
+              {% if song_url contains "://" %}
+                target="_blank"
+                rel="noopener noreferrer"
+              {% endif %}
+            >
+              {{ song.title | default: "Canción" }}
+            </a>
+          {% else %}
+            <span class="music-song-title">{{ song.title | default: "Canción" }}</span>
+          {% endif %}
+          {% if song.artist %}
+            <span class="music-song-artist">{{ song.artist }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% else %}
+  <p>No hay canciones añadidas todavía.</p>
+{% endif %}

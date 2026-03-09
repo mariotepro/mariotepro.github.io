@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="page-links{% if page.stack_links %} stack-links{% endif %}">
+<section class="page-links{% if page.stack_links %} stack-links{% endif %}{% if page.music_links %} music-links{% endif %}{% if page.pages_links %} pages-links{% endif %}{% if page.blogroll_links %} blogroll-links{% endif %}">
   {% if page.intro %}
     <p>{{ page.intro }}</p>
   {% endif %}
