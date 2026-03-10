@@ -7,6 +7,18 @@ layout: page
     {% for disc in page.discs %}
       <article class="music-disc" aria-label="{{ disc.title }}">
         {% if disc.cover %}
+          {% assign webp_1x = disc.cover_webp %}
+          {% if webp_1x == "" %}
+            {% if disc.cover contains ".jpg" %}
+              {% assign webp_1x = disc.cover | replace: ".jpg", ".webp" %}
+            {% elsif disc.cover contains ".jpeg" %}
+              {% assign webp_1x = disc.cover | replace: ".jpeg", ".webp" %}
+            {% elsif disc.cover contains ".png" %}
+              {% assign webp_1x = disc.cover | replace: ".png", ".webp" %}
+            {% endif %}
+          {% endif %}
+
+          {% assign webp_2x = disc.cover_2x_webp %}
           {% if disc.url %}
             <a
               class="music-disc-cover-link"
@@ -16,18 +28,70 @@ layout: page
                 rel="noopener noreferrer"
               {% endif %}
             >
+              {% if webp_1x %}
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      {{ webp_1x | relative_url }} 1x
+                      {% if webp_2x %}, {{ webp_2x | relative_url }} 2x{% endif %}
+                    "
+                    sizes="(min-width: 560px) 90px, 72px"
+                  >
+                  <img
+                    class="music-disc-cover"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
+                    src="{{ disc.cover | relative_url }}"
+                    alt="Portada de {{ disc.album | default: disc.title }}"
+                  />
+                </picture>
+              {% else %}
               <img
                 class="music-disc-cover"
+                width="500"
+                height="500"
+                loading="lazy"
+                decoding="async"
                 src="{{ disc.cover | relative_url }}"
                 alt="Portada de {{ disc.album | default: disc.title }}"
               />
+              {% endif %}
             </a>
           {% else %}
-            <img
-              class="music-disc-cover"
-              src="{{ disc.cover | relative_url }}"
-              alt="Portada de {{ disc.album | default: disc.title }}"
-            />
+            {% if webp_1x %}
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    {{ webp_1x | relative_url }} 1x
+                    {% if webp_2x %}, {{ webp_2x | relative_url }} 2x{% endif %}
+                  "
+                  sizes="(min-width: 560px) 90px, 72px"
+                >
+                <img
+                  class="music-disc-cover"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  src="{{ disc.cover | relative_url }}"
+                  alt="Portada de {{ disc.album | default: disc.title }}"
+                />
+              </picture>
+            {% else %}
+              <img
+                class="music-disc-cover"
+                width="500"
+                height="500"
+                loading="lazy"
+                decoding="async"
+                src="{{ disc.cover | relative_url }}"
+                alt="Portada de {{ disc.album | default: disc.title }}"
+              />
+            {% endif %}
           {% endif %}
         {% endif %}
         <div class="music-disc-info">

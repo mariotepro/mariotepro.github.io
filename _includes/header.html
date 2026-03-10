@@ -9,7 +9,20 @@
 	{% endif %}
 
 	<a href="{{ link | prepend: site.baseurl | prepend: site.url }}">
-		<img src="{{ site.logo_url }}" class="logo-avatar">
+		<picture>
+			<source
+				type="image/webp"
+				srcset="{{ site.logo_url_webp | default: site.logo_url }}"
+			>
+			<img
+				src="{{ site.logo_url }}"
+				class="logo-avatar"
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+				alt=""
+			>
+		</picture>
 	</a>
 	<span class="logo-prompt code">{{ prompt }}</span>
 

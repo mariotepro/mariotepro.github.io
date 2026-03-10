@@ -1,11 +1,17 @@
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {% if page.title %}
-	<title>{{ page.title }} · {{ site.title }}</title>
+  <title>{{ page.title }} · {{ site.title }}</title>
 {% else %}
-	<title>{{ site.title }}</title>
+  <title>{{ site.title }}</title>
 {% endif %}
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="referrer" content="no-referrer">
+{% assign logo_preload = site.logo_url_webp | default: site.logo_url %}
+{% if logo_preload %}
+  <link rel="preload" as="image" href="{{ logo_preload | relative_url }}">
+{% endif %}
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
-<link rel="stylesheet" href="{{ "/assets/core.css" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="preload" href="{{ "/assets/core.css" | relative_url }}" as="style">
+<link rel="stylesheet" href="{{ "/assets/core.css" | relative_url }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ "/assets/core.css" | relative_url }}"></noscript>
