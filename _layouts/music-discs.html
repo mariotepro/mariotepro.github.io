@@ -8,15 +8,6 @@ layout: page
       <article class="music-disc" aria-label="{{ disc.title }}">
         {% if disc.cover %}
           {% assign webp_1x = disc.cover_webp %}
-          {% if webp_1x == "" %}
-            {% if disc.cover contains ".jpg" %}
-              {% assign webp_1x = disc.cover | replace: ".jpg", ".webp" %}
-            {% elsif disc.cover contains ".jpeg" %}
-              {% assign webp_1x = disc.cover | replace: ".jpeg", ".webp" %}
-            {% elsif disc.cover contains ".png" %}
-              {% assign webp_1x = disc.cover | replace: ".png", ".webp" %}
-            {% endif %}
-          {% endif %}
 
           {% assign webp_2x = disc.cover_2x_webp %}
           {% if disc.url %}
