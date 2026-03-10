@@ -39,5 +39,8 @@ layout: page
     {% endfor %}
   </section>
 {% else %}
-  <p>No hay discos añadidos todavía.</p>
+  <section class="media-empty-state" role="note" aria-label="Sin contenido">
+    <div class="media-empty-emoji" aria-hidden="true">🕳️</div>
+    <p class="media-empty-text">nope, aquí no hay nada</p>
+  </section>
 {% endif %}

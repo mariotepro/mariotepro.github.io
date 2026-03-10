@@ -619,6 +619,24 @@ section {
   margin: 30px 0 0;
 }
 
+.media-empty-state {
+  margin: 42px 0;
+  text-align: center;
+}
+
+.media-empty-emoji {
+  margin: 0 auto 1rem;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.media-empty-text {
+  margin: 0;
+  color: #666;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
 .music-disc {
   display: grid;
   grid-template-columns: 90px 1fr;
