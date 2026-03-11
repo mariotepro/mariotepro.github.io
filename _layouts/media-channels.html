@@ -1,0 +1,58 @@
+---
+layout: page
+---
+
+{% if page.items and page.items != empty %}
+  <section class="media-channels" aria-label="Canales">
+    <ul class="media-channel-list">
+      {% for item in page.items %}
+        {% assign item_url = item.url | default: item.link | default: "" %}
+        {% assign item_title = item.title | default: item.name | default: "Canal" %}
+        {% assign item_icon = item.icon | default: item.logo | default: item.image | default: item.avatar | default: "" | strip %}
+        {% assign item_tag = item.tag | default: item.label | strip %}
+        {% if item_tag == "" %}
+          {% assign item_host = item_url | split: '://' | last | split: '/' | first | strip %}
+          {% assign item_host = item_host | remove: "www." %}
+          {% if item_host != "" %}
+            {% assign item_tag = item_host | split: "." | first | capitalize %}
+          {% endif %}
+        {% endif %}
+
+        <li class="media-channel-item">
+          {% if item_icon != "" %}
+            {% if item_url != blank %}
+              <a class="media-channel-cover-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                <img class="media-channel-cover" width="72" height="72" loading="lazy" decoding="async" src="{{ item_icon | relative_url }}" alt="Logo {{ item_title }}" />
+              </a>
+            {% else %}
+              <img class="media-channel-cover" width="72" height="72" loading="lazy" decoding="async" src="{{ item_icon | relative_url }}" alt="Logo {{ item_title }}" />
+            {% endif %}
+          {% else %}
+            <span class="media-channel-cover media-channel-cover-placeholder" aria-hidden="true">▶</span>
+          {% endif %}
+
+          <div class="media-channel-main">
+            <p class="media-channel-title">
+              {% if item_url != blank %}
+                <a class="media-channel-title-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ item_title }}</a>
+              {% else %}
+                <span class="media-channel-title no-link">{{ item_title }}</span>
+              {% endif %}
+            </p>
+            {% if item.description %}
+              <p class="media-channel-description">{{ item.description }}</p>
+            {% endif %}
+          </div>
+          {% if item_tag != "" %}
+            <p class="media-channel-tag">{{ item_tag }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% else %}
+  <section class="media-empty-state" role="note" aria-label="Sin contenido">
+    <div class="media-empty-emoji" aria-hidden="true">🕳️</div>
+    <p class="media-empty-text">nope, aquí no hay nada</p>
+  </section>
+{% endif %}

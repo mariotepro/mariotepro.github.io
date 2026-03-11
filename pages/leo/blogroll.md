@@ -3,9 +3,9 @@ layout: link-list
 blogroll_links: true
 permalink: /blogroll
 title: Blogroll
-intro: ""
+
 sections:
-  - title: Blogs
+  - title: Blogroll
     links:
       - title: Manu Mateos
         url: https://www.macram.es/

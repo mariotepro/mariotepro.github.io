@@ -5,19 +5,35 @@ permalink: /pages
 title: Páginas
 sections:
   - title: Cosas que me gustan
-    links:
-      - title: Blogroll
-        url: /blogroll
-        description: Blogs que leo con frecuencia
-      - title: Música
-        url: /pages/musica
-      - title: Veo
-        url: /veo
-      - title: Escucho
-        description: Cosas que escucho y no son música
-        url: /escucho
+    subsections:
       - title: Leo
-        url: /leo
+        links:
+          - title: Blogroll
+            url: /blogroll
+            description: Blogs que leo con frecuencia
+          - title: Webs
+            url: /webpages
+            description: Otras webs que visito con frecuencia
+          - title: Libros
+            url: /libros
+          - title: Artículos
+            url: /articulos
+      - title: Escucho
+        links:
+          - title: Discos
+            url: /discos
+          - title: Canciones
+            url: /canciones
+          - title: Playlists
+            url: /playlists
+          - title: Podroll
+            url: /podroll
+      - title: Veo
+        links:
+          - title: Canales
+            url: /canales
+          - title: Vídeos
+            url: /videos
   - title: Soy
     links:
       - title: Stack
@@ -26,8 +42,7 @@ sections:
       - title: Valores
         url: /valores
       - title: Nope
-        url: /nope
-        description: Cosas que son un no y que no voy a tolerar. Mis límites.
+        url: /nope 
       - title: Burra
         url: /burra
         description: De esta burra no me pienso bajar.

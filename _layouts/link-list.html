@@ -2,19 +2,69 @@
 layout: default
 ---
 
-<section class="page-links{% if page.stack_links %} stack-links{% endif %}{% if page.music_links %} music-links{% endif %}{% if page.pages_links %} pages-links{% endif %}{% if page.blogroll_links %} blogroll-links{% endif %}">
+<section class="page-links page-list{% if page.stack_links %} stack-links{% endif %}{% if page.music_links %} music-links{% endif %}{% if page.pages_links %} pages-links{% endif %}{% if page.blogroll_links %} blogroll-links{% endif %}">
   {% if page.intro %}
     <p>{{ page.intro }}</p>
   {% endif %}
 
+  {% assign has_links = false %}
+
   {% if page.sections %}
     {% for section in page.sections %}
-      <h3 class="code">{{ section.title }}</h3>
       {% if section.subsections %}
         {% for subsection in section.subsections %}
-          <h4 class="subtitle code">{{ subsection.title }}</h4>
-          <ul class="links-list subsection-links">
-            {% for item in subsection.links %}
+          {% if subsection.links %}
+            {% if subsection.links != empty %}
+              {% assign has_links = true %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% elsif section.links %}
+        {% if section.links != empty %}
+          {% assign has_links = true %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if page.links %}
+    {% if page.links != empty %}
+      {% assign has_links = true %}
+    {% endif %}
+  {% endif %}
+
+  {% if has_links %}
+    {% if page.sections %}
+      {% for section in page.sections %}
+        {% if page.pages_links or section.title != page.title %}
+          <h3 class="code">{{ section.title }}</h3>
+        {% endif %}
+        {% if section.subsections %}
+          {% for subsection in section.subsections %}
+            <h4 class="subtitle code">{{ subsection.title }}</h4>
+            <ul class="links-list subsection-links">
+              {% for item in subsection.links %}
+                <li>
+                  <div class="title">
+                    {% assign has_url = item.url | default: "" | strip %}
+                    {% if has_url != "" %}
+                      {% if has_url contains "://" %}
+                        <a href="{{ has_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                      {% else %}
+                        <a href="{{ has_url | relative_url }}">{{ item.title }}</a>
+                      {% endif %}
+                    {% else %}
+                      <span class="no-link title-text">{{ item.title }}</span>
+                    {% endif %}
+                  </div>
+                  <div class="page-description code{% unless item.description %} page-description--empty{% endunless %}">{% if item.description %}{{ item.description }}{% endif %}</div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        {% elsif section.links %}
+          <ul class="links-list">
+            {% for item in section.links %}
               <li>
                 <div class="title">
                   {% assign has_url = item.url | default: "" | strip %}
@@ -28,38 +78,13 @@ layout: default
                     <span class="no-link title-text">{{ item.title }}</span>
                   {% endif %}
                 </div>
-                {% if item.description %}
-                  <div class="page-description code">{{ item.description }}</div>
-                {% endif %}
+                <div class="page-description code{% unless item.description %} page-description--empty{% endunless %}">{% if item.description %}{{ item.description }}{% endif %}</div>
               </li>
             {% endfor %}
           </ul>
-        {% endfor %}
-      {% elsif section.links %}
-        <ul class="links-list">
-          {% for item in section.links %}
-            <li>
-              <div class="title">
-                {% assign has_url = item.url | default: "" | strip %}
-                {% if has_url != "" %}
-                  {% if has_url contains "://" %}
-                    <a href="{{ has_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
-                  {% else %}
-                    <a href="{{ has_url | relative_url }}">{{ item.title }}</a>
-                  {% endif %}
-                {% else %}
-                  <span class="no-link title-text">{{ item.title }}</span>
-                {% endif %}
-              </div>
-              {% if item.description %}
-                <div class="page-description code">{{ item.description }}</div>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endfor %}
-  {% elsif page.links %}
+        {% endif %}
+      {% endfor %}
+    {% elsif page.links %}
       <ul class="links-list">
         {% for item in page.links %}
           <li>
@@ -75,11 +100,15 @@ layout: default
                 <span class="no-link title-text">{{ item.title }}</span>
               {% endif %}
             </div>
-            {% if item.description %}
-              <div class="page-description code">{{ item.description }}</div>
-          {% endif %}
+            <div class="page-description code{% unless item.description %} page-description--empty{% endunless %}">{% if item.description %}{{ item.description }}{% endif %}</div>
         </li>
-      {% endfor %}
-    </ul>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% else %}
+    <section class="media-empty-state" role="note" aria-label="Sin contenido">
+      <div class="media-empty-emoji" aria-hidden="true">🕳️</div>
+      <p class="media-empty-text">nope, aquí no hay nada</p>
+    </section>
   {% endif %}
 </section>

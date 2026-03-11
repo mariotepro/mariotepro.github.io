@@ -8,6 +8,13 @@ layout: default
 	</div>
 
 	<div class="divider"></div>
-
-	{{ content }}
+	{% assign page_body = content | strip_html | strip %}
+	{% if page_body == "" %}
+	<section class="media-empty-state" role="note" aria-label="Sin contenido">
+		<div class="media-empty-emoji" aria-hidden="true">🕳️</div>
+		<p class="media-empty-text">nope, aquí no hay nada</p>
+	</section>
+	{% else %}
+		{{ content }}
+	{% endif %}
 </article>

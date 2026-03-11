@@ -1,9 +1,9 @@
 ---
-layout: music-discs
-title: Discos
-permalink: /pages/musica/discos
+layout: media-cards
+title: Libros
+permalink: /libros
 
-discs:
+items:
   - title: Realimentación
     artist: Supersubmarina
     year: 2011

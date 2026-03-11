@@ -1,0 +1,169 @@
+---
+layout: page
+---
+
+{% assign collection_items = page.items %}
+{% if collection_items == nil or collection_items == empty %}
+  {% if page.discs and page.discs != empty %}
+    {% assign collection_items = page.discs %}
+  {% elsif page.songs and page.songs != empty %}
+    {% assign collection_items = page.songs %}
+  {% elsif page.videos and page.videos != empty %}
+    {% assign collection_items = page.videos %}
+  {% elsif page.channels and page.channels != empty %}
+    {% assign collection_items = page.channels %}
+  {% endif %}
+{% endif %}
+
+{% assign collection_type = page.collection_type | default: page.layout | strip %}
+{% if collection_type == "media-items" %}
+  {% assign collection_type = "list" %}
+{% elsif collection_type == "media-videos" %}
+  {% assign collection_type = "list" %}
+{% elsif collection_type == "music-songs" %}
+  {% assign collection_type = "list" %}
+{% elsif collection_type == "media-cards" %}
+  {% assign collection_type = "cards" %}
+{% elsif collection_type == "video-list" %}
+  {% assign collection_type = "list" %}
+{% elsif collection_type == "music-discs" %}
+  {% assign collection_type = "cards" %}
+{% elsif collection_type == "video-channels" %}
+  {% assign collection_type = "channels" %}
+{% endif %}
+
+{% if collection_type == "" %}
+  {% if page.channels != empty %}
+    {% assign collection_type = "channels" %}
+  {% elsif page.discs != empty %}
+    {% assign collection_type = "cards" %}
+  {% else %}
+    {% assign collection_type = "list" %}
+  {% endif %}
+{% endif %}
+
+{% if collection_items and collection_items != empty %}
+  {% if collection_type == "channels" %}
+    <section class="media-channels" aria-label="Canales">
+      <ul class="media-channel-list">
+        {% for item in collection_items %}
+          {% assign item_url = item.url | default: item.link | default: "" %}
+          {% assign item_title = item.title | default: item.name | default: "Canal" %}
+          {% assign item_icon = item.icon | default: item.logo | default: item.image | default: item.avatar | default: "" | strip %}
+          {% assign item_tag = item.tag | default: item.label | strip %}
+
+          <li class="media-channel-item">
+            {% if item_icon != "" %}
+              {% if item_url != blank %}
+                <a class="media-channel-cover-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                  <img class="media-channel-cover" width="72" height="72" loading="lazy" decoding="async" src="{{ item_icon | relative_url }}" alt="Logo {{ item_title }}" />
+                </a>
+              {% else %}
+                <img class="media-channel-cover" width="72" height="72" loading="lazy" decoding="async" src="{{ item_icon | relative_url }}" alt="Logo {{ item_title }}" />
+              {% endif %}
+            {% else %}
+              <span class="media-channel-cover media-channel-cover-placeholder" aria-hidden="true">▶</span>
+            {% endif %}
+
+            <div class="media-channel-main">
+              <p class="media-channel-title">
+                {% if item_url != blank %}
+                  <a class="media-channel-title-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ item_title }}</a>
+                {% else %}
+                  <span class="media-channel-title no-link">{{ item_title }}</span>
+                {% endif %}
+              </p>
+              {% if item.description %}
+                <p class="media-channel-description">{{ item.description }}</p>
+              {% endif %}
+            </div>
+            {% if item_tag != "" %}
+              <p class="media-channel-tag">{{ item_tag }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  {% elsif collection_type == "cards" %}
+    <section class="music-discs">
+      {% for item in collection_items %}
+        {% assign item_cover = item.cover | default: item.image %}
+        {% assign webp_1x = item.cover_webp | default: item.image_webp %}
+        {% assign webp_2x = item.cover_2x_webp | default: item.image_2x_webp %}
+        {% assign item_url = item.url | default: item.link %}
+
+        <article class="music-disc" aria-label="{{ item.title }}">
+          {% if item_cover %}
+            {% if item_url %}
+              <a class="music-disc-cover-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                {% if webp_1x %}
+                  <picture>
+                    <source type="image/webp" srcset="{{ webp_1x | relative_url }} 1x{% if webp_2x %}, {{ webp_2x | relative_url }} 2x{% endif %}" sizes="(min-width: 560px) 90px, 72px">
+                    <img class="music-disc-cover" width="500" height="500" loading="lazy" decoding="async" src="{{ item_cover | relative_url }}" alt="Portada de {{ item.album | default: item.title }}" />
+                  </picture>
+                {% else %}
+                  <img class="music-disc-cover" width="500" height="500" loading="lazy" decoding="async" src="{{ item_cover | relative_url }}" alt="Portada de {{ item.album | default: item.title }}" />
+                {% endif %}
+              </a>
+            {% else %}
+              {% if webp_1x %}
+                <picture>
+                  <source type="image/webp" srcset="{{ webp_1x | relative_url }} 1x{% if webp_2x %}, {{ webp_2x | relative_url }} 2x{% endif %}" sizes="(min-width: 560px) 90px, 72px">
+                  <img class="music-disc-cover" width="500" height="500" loading="lazy" decoding="async" src="{{ item_cover | relative_url }}" alt="Portada de {{ item.album | default: item.title }}" />
+                </picture>
+              {% else %}
+                <img class="music-disc-cover" width="500" height="500" loading="lazy" decoding="async" src="{{ item_cover | relative_url }}" alt="Portada de {{ item.album | default: item.title }}" />
+              {% endif %}
+            {% endif %}
+          {% endif %}
+
+          <div class="music-disc-info">
+            <p class="music-disc-title">{{ item.title }}</p>
+            <p class="music-disc-artist">{{ item.subtitle | default: item.artist }}</p>
+            <p class="music-disc-year">{{ item.year }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+
+  {% else %}
+    <section class="media-list media-song-list">
+      <ul class="music-song-list">
+        {% for item in collection_items %}
+          {% assign item_url = item.url | default: item.link | default: item.player_url %}
+          {% assign item_tag = item.tag | default: item.category | default: item.label | strip %}
+
+          <li class="music-song-item">
+            <div class="media-list-content">
+              <p class="media-song-title">
+                {% if item_url != blank %}
+                  <a class="music-song-link" href="{{ item_url }}" {% if item_url contains "://" %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    {{ item.title | default: "Entrada" }}
+                  </a>
+                {% else %}
+                  <span class="music-song-title">{{ item.title | default: "Entrada" }}</span>
+                {% endif %}
+              </p>
+              {% if item.description %}
+                <p class="media-video-description">{{ item.description }}</p>
+              {% endif %}
+            </div>
+            {% assign item_subtitle = item.subtitle | default: item.artist %}
+            {% if item_subtitle %}
+              <p class="music-song-artist">{{ item_subtitle }}</p>
+            {% endif %}
+            {% if item_tag != "" %}
+              <p class="media-video-tag media-list-tag">{{ item_tag }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% else %}
+  <section class="media-empty-state" role="note" aria-label="Sin contenido">
+    <div class="media-empty-emoji" aria-hidden="true">🕳️</div>
+    <p class="media-empty-text">nope, aquí no hay nada</p>
+  </section>
+{% endif %}
